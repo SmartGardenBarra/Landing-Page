@@ -34,6 +34,7 @@
                     <div class="stars">⭐⭐⭐⭐⭐</div>
                     <p class="itemArray price">R$ 50,00</p>
                     <p class="itemArray priceNew">R$40,00</p>
+                    <p class="itemArray desconto"></p>
                     <a href="https://smartgardenbarra.com.br/produto/begonia-rex/" style="text-decoration: none;">
                         <div class="button">COMPRAR PRODUTO</div>
                     </a>
@@ -74,18 +75,23 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             var divContent = [
-                { id: 0, nome: 'Begônia Rex', subTitle: 'A rainhas das Begônias', descricao: 'A Begônia Rex é a planta perfeita para dar uma repaginada no seu cenário e deixa-lo mais charmoso e selvajem.', oldPrice: 'R$ 50,00', promoPrice: 'R$ 40,00', img: './imgs/begonia-rex.png', about: 'Mais informações sobre a Begônia Rex' }
+                { id: 0, nome: 'Begônia Rex', subTitle: 'A rainhas das Begônias', descricao: 'A Begônia Rex é a planta perfeita para dar uma repaginada no seu cenário e deixa-lo mais charmoso e selvagem.', oldPrice: 32, promoPrice: 25, img: './imgs/begonia-rex.png', about: 'Mais informações sobre a Begônia Rex' },
+                { id: 1, nome: '', subTitle: '', descricao: '', oldPrice: '', promoPrice: '', img: '', about: '' },
+                { id: 2, nome: '', subTitle: '', descricao: '', oldPrice: '', promoPrice: '', img: '', about: '' },
             ];
 
             var divs = document.getElementsByClassName('itemArray');
             var i = 0;
 
+            var per = 100-(divContent[i].promoPrice / divContent[i].oldPrice)*100;
+
             divs[0].textContent = divContent[i].nome;
             divs[1].textContent = divContent[i].subTitle;
             divs[2].textContent = divContent[i].descricao;
-            divs[3].textContent = divContent[i].oldPrice;
-            divs[4].textContent = divContent[i].promoPrice;
-            divs[5].textContent = divContent[i].about;
+            divs[3].textContent = `R$ ${divContent[i].oldPrice},00`;
+            divs[4].textContent = `R$ ${divContent[i].promoPrice},00`;
+            divs[5].textContent = `${per.toFixed(0)}% de desconto`;
+            divs[6].textContent = divContent[i].about;
 
             var imgElement = document.getElementById('imgSrc');
 

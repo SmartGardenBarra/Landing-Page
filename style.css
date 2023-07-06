@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
+:root {
+    --product-color: rgb(87, 184, 111);
+    --backshadow-color: #c1737e;
+    --backshadow-color-2: #7d434d;
+}
+
 body {
     padding: 0;
     margin: 0;
@@ -66,7 +72,7 @@ body {
 .content .topo,
 .content .footer {
     height: 110px;
-    background-color: rgb(117, 212, 117);
+    background-color: var(--product-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -133,7 +139,7 @@ body {
     margin: 0 0 0 5%;
     font-size: 18px;
     font-weight: bold;
-    color: red;
+    color: #7d434d;
     text-decoration: line-through;
 }
 
@@ -141,6 +147,11 @@ body {
     margin: 0 0 0 5%;
     font-size: 35px;
     font-weight: bold;
+}
+
+.desconto {
+    margin: 0 0 0 5%;
+
 }
 
 .prodInfo .button {
@@ -205,7 +216,7 @@ body {
     width: 100%;
 }
 .imgArea .backGradient {
-    background: linear-gradient(180deg, aliceblue, rgba(0,0,0,0));
+    background: linear-gradient(180deg, var(--backshadow-color), var(--backshadow-color-2) 20%, rgba(0,0,0,0));
     height: 54%;
     width: 35%;
     position: absolute;
