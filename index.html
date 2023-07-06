@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page - smart garden</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <img src="./imgs/smtgb-logo.png" alt="">
+            <div>
+                <a href="https://www.smartgardenbarra.com.br" target="_blank">site</a>
+                <a href="https://smartgardenbarra.com.br/loja/" target="_blank">produtos</a>
+                <a href="https://smartgardenbarra.com.br/sobre/" target="_blank">sobre nós</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="topo">
+                <h2>Produto Premium</h2>
+                <h4>Promoção em Destaque</h4>
+            </div>
+            <div class="middle">
+
+                <div class="prodInfo">
+                    <h1 class="itemArray">Begônia Rex</h1>
+                    <h2 class="itemArray">A rainha das Begônias</h2>
+                    <p class="itemArray prodDesc">Descrição</p>
+                    <p class="oferta">Oferta!</p>
+                    <div class="stars">⭐⭐⭐⭐⭐</div>
+                    <p class="itemArray price">R$ 50,00</p>
+                    <p class="itemArray priceNew">R$40,00</p>
+                    <a href="https://smartgardenbarra.com.br/produto/begonia-rex/" style="text-decoration: none;">
+                        <div class="button">COMPRAR PRODUTO</div>
+                    </a>
+                    <div class="prodInfoFooter">
+                        <p class="itemArray">Mais informações</p>
+                        <a href="">Informações sobre o produto</a>
+                    </div>
+                </div>
+
+                <div class="imgArea">
+                    <img class="itemArray prodImg" id="imgSrc" src="" alt="">
+                    <div class="imgAreaBackground">
+                        <div class="backGradient"></div>
+                        <img class="imgBackground" src="./imgs/mesa.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                <div style="display: flex;">
+                    <div><a href="https://www.instagram.com/smartgardenbarra/" target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/87/87390.png" alt=""
+                                style="width: 30px; height: 30px; margin-right: 10px;">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://api.whatsapp.com/send?phone=5521973400819&text=Ol%C3%A1%2C%20estou%20no%20site%20Smart%20Garden%20Barra%2C%20pode%20me%20ajudar%20%3F"
+                            target="_blank">
+                            <img src="https://cdn-icons-png.flaticon.com/512/152/152740.png" alt=""
+                                style="width: 30px; height: 30px; margin-left: 10px;">
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div style="color: white; width: 100%; text-align: center; margin-top: 20px; font-size: 10px;">copyright © - Direitos Reservados Smart Garden Barra</div>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            var divContent = [
+                { id: 0, nome: 'Begônia Rex', subTitle: 'A rainhas das Begônias', descricao: 'A Begônia Rex é a planta perfeita para dar uma repaginada no seu cenário e deixa-lo mais charmoso e selvajem.', oldPrice: 'R$ 50,00', promoPrice: 'R$ 40,00', img: './imgs/begonia-rex.png', about: 'Mais informações sobre a Begônia Rex' }
+            ];
+
+            var divs = document.getElementsByClassName('itemArray');
+            var i = 0;
+
+            divs[0].textContent = divContent[i].nome;
+            divs[1].textContent = divContent[i].subTitle;
+            divs[2].textContent = divContent[i].descricao;
+            divs[3].textContent = divContent[i].oldPrice;
+            divs[4].textContent = divContent[i].promoPrice;
+            divs[5].textContent = divContent[i].about;
+
+            var imgElement = document.getElementById('imgSrc');
+
+            imgElement.src = divContent[i].img;
+        });
+    </script>
+</body>
+
+</html>
